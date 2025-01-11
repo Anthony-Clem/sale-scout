@@ -14,8 +14,8 @@ const HomePage = () => {
         "Find the Best Deals Without the Hassle!"
       </h2>
       <p className="text-sm text-center font-bold text-muted-foreground">
-        &rpar;Ensure you are running this on a non-IOS device. Otherwise this
-        will not work&lpar;
+        (Ensure you are running this on a non-IOS device. Otherwise this will
+        not work)
       </p>
       <ShinyButton className="px-6 py-2" to="/dashboard">
         Track Products Now

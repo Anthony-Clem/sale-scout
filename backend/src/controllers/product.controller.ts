@@ -14,15 +14,13 @@ export const addProduct = tryCatch(async (req, res) => {
   const userId = req.userId;
 
   const userAgent = req.headers["user-agent"] || "";
-  const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
+  const isIOS = /iPhone|iPad|iPod|Macintosh/i.test(userAgent);
 
   if (isIOS) {
-    return res
-      .status(400)
-      .json({
-        message:
-          "This feature requires Chrome. Please use Chrome on a non-iOS device.",
-      });
+    return res.status(400).json({
+      message:
+        "This feature requires Chrome. Please use Chrome on a non-iOS device.",
+    });
   }
 
   const user = await UserModel.findById(userId);
