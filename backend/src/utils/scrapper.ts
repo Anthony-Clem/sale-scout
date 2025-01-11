@@ -9,6 +9,7 @@ export const scrapePriceAndImage = async (url: string) => {
 
   try {
     const browser = await puppeteer.launch({
+      executablePath: "/path/to/chrome",
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
     });
 
