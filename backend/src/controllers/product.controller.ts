@@ -13,6 +13,18 @@ export const addProduct = tryCatch(async (req, res) => {
   const { name, url } = productScehma.parse(req.body);
   const userId = req.userId;
 
+  const userAgent = req.headers["user-agent"] || "";
+  const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
+
+  if (isIOS) {
+    return res
+      .status(400)
+      .json({
+        message:
+          "This feature requires Chrome. Please use Chrome on a non-iOS device.",
+      });
+  }
+
   const user = await UserModel.findById(userId);
 
   if (!user) {

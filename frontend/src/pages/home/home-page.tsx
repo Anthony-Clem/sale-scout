@@ -13,6 +13,10 @@ const HomePage = () => {
       <h2 className="text-lg text-muted-foreground font-semibold italic text-center">
         "Find the Best Deals Without the Hassle!"
       </h2>
+      <p className="text-sm text-center font-bold text-muted-foreground">
+        &rpar;Ensure you are running this on a non-IOS device. Otherwise this
+        will not work&lpar;
+      </p>
       <ShinyButton className="px-6 py-2" to="/dashboard">
         Track Products Now
       </ShinyButton>
