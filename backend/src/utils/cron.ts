@@ -38,7 +38,7 @@ const checkPriceAndSendEmail = async () => {
       }
 
       product.currentPrice = scrappedPrice;
-      product.initialPrice = Date.now;
+      product.initialPrice = Date.now();
       await product.save();
     }
   } catch (error) {
