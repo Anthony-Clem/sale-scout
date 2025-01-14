@@ -4,7 +4,6 @@ import { compare, hash } from "../utils/bcrypt";
 interface UserDocument extends mongoose.Document {
   email: string;
   password: string;
-  isVerified: boolean;
   comparePasswords(
     candidatePassword: string
   ): (candidatePassword: string) => boolean;
